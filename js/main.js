@@ -142,16 +142,17 @@ if  (Q2 === 'yes' || Q2==='y')
           score++ ;
           break;
          }
-         else
-           if(x == 0)
-           {
-             console.log('sorry you finished all atempts') ;
-             alert ('sorry you finished all atempts');
-           }
-             else
+           else
              {
-               Q7 =prompt ('Incorrect Guess One Number You Have Only  '+ --y + ' Atempts');
-              }  
+             Q7 =prompt ('Incorrect Guess One Number You Have Only  '+ --y + ' Atempts');
+             }
+         
+      if(x == 0)
+        {
+          console.log('sorry you finished all atempts') ;
+          alert ('sorry you finished all atempts');
+        }
+               
     }
      
    
