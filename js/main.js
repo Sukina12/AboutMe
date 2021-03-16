@@ -1,5 +1,6 @@
 'use strict';
-
+let score = 0;
+// The First Questions 
 let name = prompt('Please Enter Your Name' );
 alert ('Welcome  ' + name + '  In My WebPage & I hope to answer These Questions with yes or no');
 
@@ -9,6 +10,7 @@ if (Q1 === 'yes' || Q1==='y')
   {
       console.log('Correct I own a LapTop');
       alert ('Correct answer I own a LapTop');
+      score++ ;
   }
   else
   {
@@ -26,6 +28,7 @@ if  (Q2 === 'yes' || Q2==='y')
   {
     console.log('correct answer I cant ride a bike');
     alert ('correct answer I cant ride a bike');
+    score++ ;
   }
 
   let Q3 = prompt ('Do I like shawarma?').toLocaleLowerCase()
@@ -33,6 +36,7 @@ if  (Q2 === 'yes' || Q2==='y')
   {
       console.log('correct answer I like shawarma');
       alert ('correct answer I like shawarma');
+      score++ ;
   }
   else
   {
@@ -45,6 +49,7 @@ if  (Q2 === 'yes' || Q2==='y')
   {
       console.log('correct answer I have children');
       alert ('correct answer I have children');
+      score++ ;
   }
   else
   {
@@ -62,10 +67,94 @@ if  (Q2 === 'yes' || Q2==='y')
   {
     console.log('correct answer I havent car');
     alert ('correct answer I havent car');
+    score++ ;
   }
 
-  alert ('Thank  you  ' + name +  ' for Answering And Welcome ');
+  // Seconde Part
+  let Q6 = prompt ('Guess My Age Between 20 & 40');
+ 
+  if(Q6 == '30')
+  {
+    console.log('Correct I am 30 Years Old');
+    alert('Correct I am 30 Years Old');
+    score++ ;
+  }
+  else 
+  {
+    for (let i=0; i<3; i++)
+    {
+      if (Q6 > 30  )
+         {
+          console.log('Too High  Guess For Another Chance');
+          alert ('Too High  Guess For Another Chance');
+          Q6 = prompt ('Guess My Age Between 20 & 40');
+         }
+        else 
+           if(Q6 < 30 )
+          {
+            console.log('Too Low  Guess For Another Chance');
+            alert ('Too Low  Guess For Another Chance'); 
+            Q6 = prompt ('Guess My Age Between 20 & 40');
+          }
+          else
+         if (Q6 == 30)
+         {
+          console.log();
+          alert('Correct I am 30 Years Old');
+          score++ ;
+          break;
+         }
+          if (i == 3)
+          {
+            console.log('you finished all chances I am 30 years Old');
+            alert ('you finished all chances I am 30 years Old');
+          }
+     
+   }
+   
+      
+  }
+    
+   
 
- document.write('Welcome To My WebPage');
- document.write(name);
+   // Third Part
+   let myNum = [8 , 4 , 5];
+   alert ('Now I have Three Numbers in My mind');
+   let Q7= prompt ('Guess One Number From Three Numbers from 0 to 9 ?');
+
+   for(let x=0; x<7; x++)
+    {
+      if (Q7 == myNum[0] || Q7 == myNum[1])
+     {
+      console.log('Correct My Num Is ' + Q7); 
+      alert ('Correct My Num Is ' + Q7 );
+       score++ ;
+       break;
+     }
+       else
+         if ( Q7 == myNum[2])
+         {
+          console.log('Correct My Num Is ' + Q7);
+          alert ('Correct My Num Is ' + Q7 );
+          score++ ;
+          break;
+         }
+         else
+           if(x == 7)
+           {
+          console.log('sorry you finished all atempts') ;
+          alert ('sorry you finished all atempts');
+           }
+             else
+             {
+               Q7 =prompt ('Incorrect Guess One Number From Three Numbers ?');
+              }  
+    }
+     
+   
+    
+ alert('Your score is: '+score+' out of 7');
+ alert ('Thank  you  ' + name +  ' for Answering And Welcome ');
+
+ document.write('Welcome To My WebPage', name);
 
