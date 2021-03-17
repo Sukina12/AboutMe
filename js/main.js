@@ -71,9 +71,9 @@ if  (Q2 === 'yes' || Q2==='y')
   }
 
   // Seconde Part
-  let Q6 = prompt ('Guess My Age Between 20 & 40');
+  let Q6 = Number(prompt ('Guess My Age Between 20 & 40'));
  
-  if(Q6 == '30')
+  if(Q6 === 30)
   {
     console.log('Correct I am 30 Years Old');
     alert('Correct I am 30 Years Old');
@@ -81,24 +81,24 @@ if  (Q2 === 'yes' || Q2==='y')
   }
   else 
   {
-    for (let i=4; i>0; i--)
+    for (let i=3; i>0; i--)
     {
       let j = i;
       if (Q6 > 30  )
          {
           console.log('Too High  Guess For Another Chance');
-          alert ('Too High  Guess For Another Chance You Have Only  '+ --j + ' Atempts');
-          Q6 = prompt ('Guess My Age Between 20 & 40');
+          alert ('Too High  Guess For Another Chance You Have Only  '+ j + ' Atempts');
+          Q6 = Number(prompt ('Guess My Age Between 20 & 40'));
          }
          else 
            if(Q6 < 30 )
           {
             console.log('Too Low  Guess For Another Chance');
-            alert ('Too Low  Guess For Another Chance You Have Only  '+ --j + ' Atempts'); 
-            Q6 = prompt ('Guess My Age Between 20 & 40');
+            alert ('Too Low  Guess For Another Chance You Have Only  '+ j + ' Atempts'); 
+            Q6 = Number(prompt ('Guess My Age Between 20 & 40'));
           }
            else
-           if (Q6 == 30)
+           if (Q6 === 30)
            {
             console.log();
             alert('Correct I am 30 Years Old');
@@ -106,28 +106,27 @@ if  (Q2 === 'yes' || Q2==='y')
             break;
            }
             
-              
+      
+    }
+  }
+  if (Q6 !== 30) 
+       {
+        console.log('you finished all chances I am 30 years Old');
+        alert ('you finished all chances I am 30 years Old');
+      }       
      
-   }
-  if (Q6 != 30)
-  {
-    console.log('you finished all chances I am 30 years Old');
-    alert ('you finished all chances I am 30 years Old');
-  }
-        
-  }
 
    
 
    // Third Part
    let myNum = [10 , 4 , 12];
    alert ('Now I have Three Numbers in My mind');
-   let Q7= prompt ('Guess One Number From Three Numbers from 0 to 20?');
+   let Q7= Number(prompt ('Guess One Number From Three Numbers from 0 to 20?'));
 
-   for(let x=7; x>0; x--)
+   for(let x=6; x>0; x--)
     {
       let y = x;
-      if (Q7 == myNum[0] || Q7 == myNum[1])
+      if (Q7 === myNum[0] || Q7 === myNum[1])
      {
       console.log('Correct My Num Is ' + Q7); 
       alert ('Correct My Num Is ' + Q7 );
@@ -135,7 +134,7 @@ if  (Q2 === 'yes' || Q2==='y')
        break;
      }
        else
-         if ( Q7 == myNum[2])
+         if ( Q7 === myNum[2])
          {
           console.log('Correct My Num Is ' + Q7);
           alert ('Correct My Num Is ' + Q7 );
@@ -144,7 +143,7 @@ if  (Q2 === 'yes' || Q2==='y')
          }
            else
              {
-             Q7 =prompt ('Incorrect Guess One Number You Have Only  '+ --y + ' Atempts');
+             Q7 =Number(prompt ('Incorrect Guess One Number You Have Only  '+ y + ' Atempts'));
              }
          
       if(x == 0)
