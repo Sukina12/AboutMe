@@ -19,14 +19,16 @@ h1 {
 
 }
 
-p {
+ol li {
     font-size : 30px;
+    color:rgb(214, 25, 113)
 }
 
 body {
     text-align: center;
     background-color: rgb(250, 179, 212);
     border-style: double;
+    font-size: 30px;
 }
 
 img {
